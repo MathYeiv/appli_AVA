@@ -59,16 +59,16 @@ android {
 
     signingConfigs {
         debug {
-            keyAlias 'debug-keystore'
-            keyPassword 'music-player-app-debug'
-            storeFile file('debug-keystore.jks')
-            storePassword 'music-player-app-debug'
+            // keyAlias 'debug-keystore'
+            // keyPassword 'music-player-app-debug'
+            // storeFile file('debug-keystore.jks')
+            // storePassword 'music-player-app-debug' 
         }
         release {
-            keyAlias 'release-keystore'
-            keyPassword 'music-player-app-release'
-            storeFile file('release-keystore.jks')
-            storePassword 'music-player-app-release'
+            // keyAlias 'release-keystore'
+            // keyPassword 'music-player-app-release'
+            // storeFile file('release-keystore.jks')
+            // storePassword 'music-player-app-release'
         }
     }
 
@@ -76,24 +76,24 @@ android {
         debug {
             minifyEnabled true
             multiDexEnabled true
-            signingConfig signingConfigs.debug
+            // signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         
         release {
             minifyEnabled true
             multiDexEnabled true
-            signingConfig signingConfigs.release
+            // signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 // Suppress Java warnings treated as errors
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
     options.compilerArgs << "-Xlint:-options"
-    options.compilerArgs << "-Werror:-unchecked"
-    options.compilerArgs << "-Werror:-deprecation"
+    options.compilerArgs << "-Xlint:-deprecation"
+    options.compilerArgs << "-Xlint:-unchecked"
 }
 
 flutter {

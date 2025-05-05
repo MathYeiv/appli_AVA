@@ -57,32 +57,35 @@ class AllMusicPageWidgetState extends State<AllMusicPageWidgetStateful> with Aut
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          CustomButton(
-                            width: (getScreenWidth() - defaultHorizontalPadding) / 2 - defaultHorizontalPadding / 2, 
-                            height: getScreenHeight() * 0.075, 
-                            color: defaultCustomButtonColor, 
-                            text: 'Scan folder', 
-                            onTapped: () => runDelay((){
-                              if(mounted){
-                                controller.scan();
-                              }
-                            }, navigationDelayDuration), 
-                            setBorderRadius: true,
-                            prefix: null,
-                            loading: false
+                          Expanded(
+                            child: CustomButton(
+                              width: double.infinity,
+                              height: getScreenHeight() * 0.075,
+                              color: defaultCustomButtonColor,
+                              text: 'Scan folder',
+                              onTapped: () => runDelay(() {
+                                if (mounted) {
+                                  controller.scan();
+                                }
+                              }, navigationDelayDuration),
+                              setBorderRadius: true,
+                              prefix: null,
+                              loading: false,
+                            ),
                           ),
-                          SizedBox(
-                            width: defaultHorizontalPadding / 2
-                          ),
-                          CustomButton(
-                            width: (getScreenWidth() - defaultHorizontalPadding) / 2 - defaultHorizontalPadding / 2, 
-                            height: getScreenHeight() * 0.075, 
-                            color: defaultCustomButtonColor, 
-                            text: 'Favorites', 
-                            onTapped: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DisplayFavoritesClassWidget())), 
-                            setBorderRadius: true,
-                            prefix: null,
-                            loading: false
+                          SizedBox(width: defaultHorizontalPadding / 2),
+                          Expanded(
+                            child: CustomButton(
+                              width: double.infinity,
+                              height: getScreenHeight() * 0.075,
+                              color: defaultCustomButtonColor,
+                              text: 'Favorites',
+                              onTapped: () => Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (context) => const DisplayFavoritesClassWidget())),
+                              setBorderRadius: true,
+                              prefix: null,
+                              loading: false,
+                            ),
                           ),
                         ],
                       ),
