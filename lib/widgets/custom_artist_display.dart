@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pocket_music_player/global_files.dart';
+import '../../global_files.dart';
 
 class CustomArtistDisplayWidget extends StatefulWidget{
   final ArtistSongsClass artistSongsData;

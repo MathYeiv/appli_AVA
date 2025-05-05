@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:pocket_music_player/global_files.dart';
+import '../../global_files.dart';
 
 /// Controller which is used to handle the display of information, typically in the form of a snackbar
 class HandlerController {

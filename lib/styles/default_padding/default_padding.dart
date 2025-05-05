@@ -1,4 +1,4 @@
-import 'package:pocket_music_player/global_files.dart';
+import '../../global_files.dart';
 
 double defaultHorizontalPadding = getScreenWidth() * 0.05;
 

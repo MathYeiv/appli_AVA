@@ -2,8 +2,8 @@
 
 import 'dart:io';
 import 'package:get/get.dart';
-import 'package:pocket_music_player/controllers/permission/permission_controller.dart';
-import 'package:pocket_music_player/global_files.dart';
+import '../../controllers/permission/permission_controller.dart';
+import '../../global_files.dart';
 
 class FetchSongsController {
   Future<void> fetchLocalSongs(LoadType loadType) async {

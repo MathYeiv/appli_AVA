@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
-import 'package:pocket_music_player/controllers/songs/fetch_songs_controller.dart';
-import 'package:pocket_music_player/global_files.dart';
+import 'controllers/songs/fetch_songs_controller.dart';
+import 'global_files.dart';
 import 'package:audio_service/audio_service.dart';
-import 'package:pocket_music_player/models/theme/theme_model.dart';
+import 'models/theme/theme_model.dart';
 import 'package:talker_flutter/talker_flutter.dart';
-import 'package:pocket_music_player/controllers/shared_preferences/shared_preferences_controller.dart';
-import 'package:pocket_music_player/controllers/permission/permission_controller.dart';
+import 'controllers/shared_preferences/shared_preferences_controller.dart';
+import 'controllers/permission/permission_controller.dart';
 import 'package:media_store_plus/media_store_plus.dart';
 import 'package:device_preview/device_preview.dart';
 

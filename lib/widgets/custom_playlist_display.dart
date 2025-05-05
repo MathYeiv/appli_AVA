@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:pocket_music_player/global_files.dart';
+import '../../global_files.dart';
 
 class CustomPlaylistDisplayWidget extends StatefulWidget{
   final PlaylistSongsModel playlistSongsData;

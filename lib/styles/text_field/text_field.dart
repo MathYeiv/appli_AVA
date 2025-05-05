@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pocket_music_player/global_files.dart';
+import '../../global_files.dart';
 
 double defaultTextFieldVerticalMargin = getScreenHeight() * 0.025;
 

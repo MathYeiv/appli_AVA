@@ -4,7 +4,7 @@ import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pocket_music_player/global_files.dart';
+import '../../global_files.dart';
 
 class CustomCurrentlyPlayingExpandedWidget extends StatefulWidget{
   const CustomCurrentlyPlayingExpandedWidget({super.key});
@@ -102,12 +102,19 @@ class _CustomCurrentlyPlayingExpandedWidgetState extends State<CustomCurrentlyPl
     if(mounted){
       if(appStateRepo.audioHandler != null && audioCompleteData.value != null){
         Duration? currentDuration = appStateRepo.audioHandler!.audioPlayer.duration;
-        if(currentDuration != null){
-          currentPosition.value = min((currentDuration.inMilliseconds / appStateRepo.audioHandler!.audioPlayer.duration!.inMilliseconds), 1);
-          currentDurationStr.value = _formatDuration(currentDuration);
-          timeRemaining.value = appStateRepo.audioHandler!.audioPlayer.duration! - currentDuration;
-        }
-      }
+        currentPosition.value = min(
+  (currentDuration?.inMilliseconds ?? 0) / 
+  (appStateRepo.audioHandler?.audioPlayer.duration?.inMilliseconds ?? 1), 
+  1
+);
+
+currentDurationStr.value = _formatDuration(currentDuration ?? Duration.zero);
+
+timeRemaining.value = 
+  (appStateRepo.audioHandler?.audioPlayer.duration ?? Duration.zero) - 
+  (currentDuration ?? Duration.zero);
+
+            }
     }
   }
 

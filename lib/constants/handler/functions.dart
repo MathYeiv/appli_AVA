@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pocket_music_player/global_files.dart';
+import '../../global_files.dart';
 
 /// Returns the content of a snackbar in widget form. Typically contains text and sometimes an icon as well.
 Widget snackbarContentTemplate(IconData? iconData, String text) => Row(

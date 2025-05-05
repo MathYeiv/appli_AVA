@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:get/get.dart';
-import 'package:pocket_music_player/global_files.dart';
+import '../../global_files.dart';
 
 class SortedAlbumsController extends LoadingController {
   List<AlbumSongsClass> albumsSongsList = List<AlbumSongsClass>.from([]).obs;

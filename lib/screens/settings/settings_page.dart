@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:pocket_music_player/global_files.dart';
-import 'package:pocket_music_player/models/theme/theme_model.dart';
+import '../../global_files.dart';
+import '../../models/theme/theme_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:get/get.dart';
-import 'package:pocket_music_player/global_files.dart';
+import '../../global_files.dart';
 
 class PlaylistsController {
   List<PlaylistSongsModel> playlistsSongsList = List<PlaylistSongsModel>.from([]).obs;

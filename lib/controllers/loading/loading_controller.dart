@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:pocket_music_player/constants/loading/enums.dart';
+import '../../constants/loading/enums.dart';
 
 class LoadingController {
   Rx<LoadingStatus> status = LoadingStatus.loading.obs;

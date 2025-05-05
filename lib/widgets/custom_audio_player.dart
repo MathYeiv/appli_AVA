@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pocket_music_player/global_files.dart';
+import '../../global_files.dart';
 
 class CustomAudioPlayerWidget extends StatefulWidget{
   final AudioCompleteDataClass audioCompleteData;

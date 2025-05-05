@@ -89,6 +89,13 @@ android {
     }
 }
 
+// Suppress Java warnings treated as errors
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:-options"
+    options.compilerArgs << "-Werror:-unchecked"
+    options.compilerArgs << "-Werror:-deprecation"
+}
+
 flutter {
     source '../..'
 }

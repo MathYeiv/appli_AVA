@@ -1,4 +1,4 @@
-import 'package:pocket_music_player/controllers/shared_preferences/shared_preferences_controller.dart';
+import '../../controllers/shared_preferences/shared_preferences_controller.dart';
 import 'package:flutter/material.dart';
 
 class ThemeModel {

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get.dart' as getx;
 import 'package:just_audio/just_audio.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:pocket_music_player/global_files.dart';
+import '../../global_files.dart';
 import 'package:rxdart/rxdart.dart';
 
 class AudioStateController extends GetxController {
