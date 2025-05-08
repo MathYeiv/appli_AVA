@@ -98,13 +98,15 @@ class _PlaylistEditorWidgetState extends State<_PlaylistEditorWidgetStateful> {
                     CustomButton(
                       width: double.infinity,
                       height: getScreenHeight() * 0.07,
-                      color: verifyPlaylistName && !isLoading ? Colors.orange.withOpacity(0.75) : Colors.grey.withOpacity(0.5),
-                      onTapped: verifyPlaylistName && !isLoading ? () => controller.modifyPlaylist() : (){},
+                      onTapped: verifyPlaylistName && !isLoading
+                          ? () => controller.modifyPlaylist()
+                          : () {},
                       text: 'Update playlist data',
                       setBorderRadius: true,
                       prefix: null,
-                      loading: isLoading
+                      loading: isLoading,
                     )
+
                   ]
                 );
               })

@@ -53,7 +53,6 @@ class SongOptionController {
                     text: 'Edit tags',
                     width: double.infinity,
                     height: getScreenHeight() * 0.08,
-                    color: Colors.transparent,
                     setBorderRadius: false,
                     prefix: null,
                     loading: false
@@ -66,7 +65,6 @@ class SongOptionController {
                     text: appStateRepo.favoritesList.map((e) => e.songPath).contains(audioCompleteData.audioUrl) ? 'Remove from favorites' : 'Add to favorites',
                     width: double.infinity,
                     height: getScreenHeight() * 0.08,
-                    color: Colors.transparent,
                     setBorderRadius: false,
                     prefix: null,
                     loading: false
@@ -79,7 +77,7 @@ class SongOptionController {
                     text: 'Add to playlist',
                     width: double.infinity,
                     height: getScreenHeight() * 0.08,
-                    color: Colors.transparent,
+                    
                     setBorderRadius: false,
                     prefix: null,
                     loading: false
@@ -93,7 +91,6 @@ class SongOptionController {
                       text: 'Remove from playlist',
                       width: double.infinity,
                       height: getScreenHeight() * 0.08,
-                      color: Colors.transparent,
                       setBorderRadius: false,
                       prefix: null,
                       loading: false
@@ -107,7 +104,6 @@ class SongOptionController {
                     text: 'Delete',
                     width: double.infinity,
                     height: getScreenHeight() * 0.08,
-                    color: Colors.transparent,
                     setBorderRadius: false,
                     prefix: null,
                     loading: false
@@ -141,7 +137,7 @@ class SongOptionController {
                   text: 'Create new playlist',
                   width: double.infinity,
                   height: getScreenHeight() * 0.07,
-                  color: Colors.transparent,
+                  
                   setBorderRadius: false,
                   prefix: null,
                   loading: false
@@ -159,7 +155,7 @@ class SongOptionController {
                   text: 'Select existing playlist',
                   width: double.infinity,
                   height: getScreenHeight() * 0.07,
-                  color: Colors.transparent,
+                  
                   setBorderRadius: false,
                   prefix: null,
                   loading: false
@@ -214,7 +210,7 @@ class SongOptionController {
                               text: playlistList[i].playlistName,
                               width: double.infinity,
                               height: getScreenHeight() * 0.08,
-                              color: Colors.transparent,
+                              
                               setBorderRadius: false,
                               prefix: null,
                               loading: false
@@ -259,7 +255,6 @@ class SongOptionController {
                     ),
                     CustomButton(
                       width: double.infinity, height: getScreenHeight() * 0.065, 
-                      color: verifyInput ? Colors.orange.withOpacity(0.7) : Colors.grey.withOpacity(0.5), 
                       text: 'Create playlist and add song', 
                       onTapped: (){
                         if(mounted){
@@ -325,7 +320,7 @@ class SongOptionController {
                   text: 'Yes',
                   width: double.infinity,
                   height: getScreenHeight() * 0.08,
-                  color: Colors.transparent,
+                  
                   setBorderRadius: false,
                   prefix: null,
                   loading: false
@@ -337,7 +332,7 @@ class SongOptionController {
                   text: 'No',
                   width: double.infinity,
                   height: getScreenHeight() * 0.08,
-                  color: Colors.transparent,
+                  
                   setBorderRadius: false,
                   prefix: null,
                   loading: false

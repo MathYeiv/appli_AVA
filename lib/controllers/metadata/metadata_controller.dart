@@ -13,7 +13,7 @@ class MetadataController {
   final AudioPlayer audioPlayer = AudioPlayer();
   
   Future<AudioMetadataInfoClass?> fetchAudioMetadata(String audioUrl) async{
-    final tag = await readMetadata(File(audioUrl), getImage: true);
+    final tag = readMetadata(File(audioUrl), getImage: true);
     
     return AudioMetadataInfoClass(
       audioUrl.split('/').last, 

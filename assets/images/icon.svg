@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 700 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #abccc7;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-4 {
+        filter: url(#drop-shadow-2);
+        font-family: HelveticaNeue-Medium, 'Helvetica Neue';
+        font-size: 41.9px;
+        font-weight: 500;
+      }
+
+      .cls-4, .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="-5.99" dy="11.98"/>
+      <feGaussianBlur result="blur" stdDeviation="10.57"/>
+      <feFlood flood-color="#729e96" flood-opacity=".83"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="-2.83" dy="5.67"/>
+      <feGaussianBlur result="blur-2" stdDeviation="5"/>
+      <feFlood flood-color="#719e95" flood-opacity=".83"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect class="cls-1" x="0" y="0" width="700" height="500"/>
+  <g class="cls-3">
+    <path class="cls-2" d="M261.23,145.57l-71.86,124.48h12.78l3.17-5.52,3.17-5.52,52.73-91.35,52.74,91.35,6.48,11.04h12.64l-71.86-124.48Z"/>
+    <polygon class="cls-2" points="499.88 270.05 487.23 270.05 480.75 259 428.09 167.79 428.01 167.66 375.28 259 372.11 264.53 368.99 269.95 362.6 258.87 297.19 145.57 309.83 145.57 316.31 156.61 368.98 247.83 369.05 247.96 421.78 156.61 424.96 151.09 428.08 145.67 434.47 156.74 499.88 270.05"/>
+  </g>
+  <text class="cls-4" transform="translate(100.01 337.48)"><tspan x="0" y="0">Autisme, Vivre Autrement.</tspan></text>
+</svg>

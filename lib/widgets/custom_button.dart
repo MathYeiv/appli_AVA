@@ -1,98 +1,59 @@
 import 'package:flutter/material.dart';
-import '../../global_files.dart';
 
-Color defaultCustomButtonColor = Colors.blueGrey.withOpacity(0.6);
-
-class CustomButton extends StatefulWidget {
-  final double width;
-  final double height;
-  final Color color;
+class CustomButton extends StatelessWidget {
   final String text;
-  final Widget? prefix;
-  final VoidCallback? onTapped;
-  final bool setBorderRadius;
+  final VoidCallback onTapped;
   final bool loading;
+  final Widget? prefix;
+  final bool setBorderRadius;
+  final double? width;
+  final double? height;
 
   const CustomButton({
-    super.key, 
-    required this.width, 
-    required this.height, 
-    required this.color, 
+    super.key,
     required this.text,
-    required this.prefix,
-    required this.onTapped, 
-    required this.setBorderRadius,
-    required this.loading
+    required this.onTapped,
+    this.loading = false,
+    this.prefix,
+    this.setBorderRadius = true,
+    this.width,
+    this.height,
   });
 
   @override
-  CustomButtonState createState() => CustomButtonState();
-}
-
-class CustomButtonState extends State<CustomButton> {
-  @override void dispose(){
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: widget.width, height: widget.height,
-      child: Container(
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: widget.onTapped == null ? const Color.fromARGB(255, 112, 104, 104).withOpacity(0.5) : widget.color,
-          borderRadius: widget.setBorderRadius ? const BorderRadius.all(Radius.circular(5)) : BorderRadius.zero
-        ),
-        child: Material(
-          color: Colors.transparent,
-          child: InkWell(
-            splashFactory: InkSparkle.splashFactory,
-            onTap: (){
-              Future.delayed(
-                const Duration(milliseconds: 150), 
-                (){}
-              ).then((value) => widget.onTapped!());
-            },
-            child: Center(
-              child: widget.loading ? 
-                SizedBox(
-                  width: widget.height * 0.45,
-                  height: widget.height * 0.45,
-                  child: const CircularProgressIndicator(
-                    color: Colors.cyan,
-                    strokeWidth: 2.5,
-                  )
-                )
-              :
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    widget.prefix != null ?
-                      Row(
-                        children: [
-                          widget.prefix!,
-                          SizedBox(
-                            width: getScreenWidth() * 0.035
-                          )
-                        ]
-                      )
-                    : Container(),
-                    Text(
-                      widget.text, 
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w500, 
-                        fontSize: 15
-                      )
-                    ),
-                  ],
-                )
+    final ButtonStyle baseStyle = ElevatedButton.styleFrom(
+      minimumSize: Size(width ?? double.infinity, height ?? 48),
+      shape: setBorderRadius
+          ? RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
             )
-          ),
-        ),
-      )
+          : const RoundedRectangleBorder(),
+    );
+
+    return ElevatedButton(
+      onPressed: loading ? null : onTapped,
+      style: baseStyle,
+      child: loading
+          ? const SizedBox(
+              width: 24,
+              height: 24,
+              child: CircularProgressIndicator(
+                strokeWidth: 2,
+                color: Colors.white,
+              ),
+            )
+          : Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (prefix != null) ...[
+                  prefix!,
+                  const SizedBox(width: 8),
+                ],
+                Text(text),
+              ],
+            ),
     );
   }
-
 }

@@ -61,7 +61,6 @@ class AllMusicPageWidgetState extends State<AllMusicPageWidgetStateful> with Aut
                             child: CustomButton(
                               width: double.infinity,
                               height: getScreenHeight() * 0.075,
-                              color: defaultCustomButtonColor,
                               text: 'Scan folder',
                               onTapped: () => runDelay(() {
                                 if (mounted) {
@@ -78,7 +77,6 @@ class AllMusicPageWidgetState extends State<AllMusicPageWidgetStateful> with Aut
                             child: CustomButton(
                               width: double.infinity,
                               height: getScreenHeight() * 0.075,
-                              color: defaultCustomButtonColor,
                               text: 'Favorites',
                               onTapped: () => Navigator.of(context).push(
                                   MaterialPageRoute(builder: (context) => const DisplayFavoritesClassWidget())),
@@ -97,7 +95,6 @@ class AllMusicPageWidgetState extends State<AllMusicPageWidgetStateful> with Aut
                           CustomButton(
                             width: (getScreenWidth() - defaultHorizontalPadding) / 2 - defaultHorizontalPadding / 2, 
                             height: getScreenHeight() * 0.075, 
-                            color: defaultCustomButtonColor, 
                             text: 'Most played', 
                             onTapped: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DisplayMostPlayedClassWidget())),
                             setBorderRadius: true,
@@ -110,7 +107,6 @@ class AllMusicPageWidgetState extends State<AllMusicPageWidgetStateful> with Aut
                           CustomButton(
                             width: (getScreenWidth() - defaultHorizontalPadding) / 2 - defaultHorizontalPadding / 2, 
                             height: getScreenHeight() * 0.075, 
-                            color: defaultCustomButtonColor, 
                             text: 'Recently added', 
                             onTapped: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DisplayRecentlyAddedClassWidget())),
                             setBorderRadius: true,

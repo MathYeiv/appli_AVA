@@ -2,25 +2,70 @@ import 'package:flutter/material.dart';
 import '../../global_files.dart';
 
 class AppTheme {
-  ThemeData light = ThemeData(
-    brightness: Brightness.light,
-    textTheme: TextDisplayTheme.lightTextTheme,
-    inputDecorationTheme: TextFieldTheme.lightInputDecorationTheme,
-    dividerColor: Colors.black,
-    cardColor: Colors.grey.withOpacity(0.5),
-    primaryColor: Colors.black,
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(backgroundColor: Color.fromARGB(255, 214, 219, 224))
-  );
+  ThemeData get light => ThemeData(
+        brightness: Brightness.light,
+        fontFamily: 'Poly',
+        textTheme: TextDisplayTheme.lightTextTheme,
+        inputDecorationTheme: TextFieldTheme.lightInputDecorationTheme,
+        scaffoldBackgroundColor: const Color(0xFFF5F9FA),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color(0xFF0D9DB6),
+          primary: Color(0xFF0D9DB6),
+          secondary: Color(0xFF00C9A7),
+          background: Color(0xFFF5F9FA),
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF0D9DB6),
+          foregroundColor: Colors.white,
+          elevation: 0,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color(0xFF0D9DB6),
+            foregroundColor: Colors.white,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(12)),
+            ),
+            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+            textStyle: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            foregroundColor: Color(0xFF0D9DB6),
+          ),
+        ),
+        dividerColor: Colors.black,
+        cardColor: Colors.grey.withOpacity(0.1),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Color(0xFFE7EEF3),
+        ),
+        useMaterial3: true,
+      );
 
-  ThemeData dark = ThemeData(
-    brightness: Brightness.dark,
-    textTheme: TextDisplayTheme.darkTextTheme,
-    inputDecorationTheme: TextFieldTheme.darkInputDecorationTheme,
-    dividerColor: Colors.white,
-    cardColor: Colors.grey.withOpacity(0.5),
-    primaryColor: Colors.white,
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(backgroundColor: Color.fromARGB(255, 57, 63, 63))
-  );
+  ThemeData get dark => ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: 'Poly',
+        textTheme: TextDisplayTheme.darkTextTheme,
+        inputDecorationTheme: TextFieldTheme.darkInputDecorationTheme,
+        colorScheme: ColorScheme.dark(
+          primary: Color(0xFF0D9DB6),
+          secondary: Color(0xFF00C9A7),
+          background: Colors.black,
+        ),
+        scaffoldBackgroundColor: const Color(0xFF121212),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF0D9DB6),
+          foregroundColor: Colors.white,
+          elevation: 0,
+        ),
+        dividerColor: Colors.white,
+        cardColor: Colors.grey.withOpacity(0.1),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Color(0xFF1F1F1F),
+        ),
+        useMaterial3: true,
+      );
 }
 
 final AppTheme globalTheme = AppTheme();
