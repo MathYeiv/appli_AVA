@@ -63,7 +63,7 @@ class SettingsPageState extends State<SettingsPage> {
             builder: (_, snapshot) {
               final PackageInfo? packageInfo = snapshot.data;
               return settingWidget(
-                Image.asset('assets/images/icon.png', width: 35, height: 35),
+                Image.asset('assets/images/icon.svg', width: 35, height: 35),
                 'Version',
                 () {},
                 subtitle: packageInfo == null

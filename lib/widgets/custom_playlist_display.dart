@@ -78,7 +78,6 @@ class _CustomPlaylistDisplayWidgetState extends State<CustomPlaylistDisplayWidge
                     text: 'Edit playlist',
                     width: double.infinity,
                     height: getScreenHeight() * 0.08,
-                    color: Colors.transparent,
                     setBorderRadius: false,
                     prefix: null,
                     loading: false
@@ -93,7 +92,6 @@ class _CustomPlaylistDisplayWidgetState extends State<CustomPlaylistDisplayWidge
                     text: 'Delete playlist',
                     width: double.infinity,
                     height: getScreenHeight() * 0.08,
-                    color: Colors.transparent,
                     setBorderRadius: false,
                     prefix: null,
                     loading: false
@@ -117,7 +115,6 @@ class _CustomPlaylistDisplayWidgetState extends State<CustomPlaylistDisplayWidge
     }).toList();
     
     return Card(
-      color: defaultCustomButtonColor,
       margin: EdgeInsets.symmetric(horizontal: defaultHorizontalPadding / 2, vertical: defaultVerticalPadding / 2),
       child: Material(
         color: Colors.transparent,

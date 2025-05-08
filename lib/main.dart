@@ -56,7 +56,7 @@ Future<void> initializeAudioService() async{
 }
 
 Future<void> initializeDefaultStartingDisplayImage() async{
-  ByteData byteData = await rootBundle.load('assets/images/music-icon.png');
+  ByteData byteData = await rootBundle.load('assets/images/music-icon.svg');
   appStateRepo.audioImageData = byteData.buffer.asUint8List();
 }
 

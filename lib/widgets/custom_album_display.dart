@@ -25,7 +25,6 @@ class _CustomAlbumDisplayWidgetState extends State<CustomAlbumDisplayWidget>{
   @override
   Widget build(BuildContext context){
     return Card(
-      color: defaultCustomButtonColor,
       margin: EdgeInsets.symmetric(horizontal: defaultHorizontalPadding / 2, vertical: defaultVerticalPadding / 2),
       child: Material(
         color: Colors.transparent,

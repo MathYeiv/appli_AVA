@@ -14,7 +14,7 @@ class AboutPage extends StatelessWidget {
             // Logo at the top center
             Center(
               child: Image.asset(
-                'assets/images/icon.png', // make sure this path is correct
+                'assets/images/icon.svg', // make sure this path is correct
                 height: 100,
               ),
             ),

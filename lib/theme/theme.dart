@@ -9,10 +9,10 @@ class AppTheme {
         inputDecorationTheme: TextFieldTheme.lightInputDecorationTheme,
         scaffoldBackgroundColor: const Color(0xFFF5F9FA),
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Color(0xFF0D9DB6),
-          primary: Color(0xFF0D9DB6),
-          secondary: Color(0xFF00C9A7),
-          background: Color(0xFFF5F9FA),
+          seedColor: const Color(0xFF0D9DB6),
+          primary: const Color(0xFF0D9DB6),
+          secondary: const Color(0xFF00C9A7),
+          surface: const Color(0xFFF5F9FA),
         ),
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFF0D9DB6),
@@ -21,7 +21,7 @@ class AppTheme {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color(0xFF0D9DB6),
+            backgroundColor: const Color(0xFF0D9DB6),
             foregroundColor: Colors.white,
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -32,7 +32,7 @@ class AppTheme {
         ),
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
-            foregroundColor: Color(0xFF0D9DB6),
+            foregroundColor: const Color(0xFF0D9DB6),
           ),
         ),
         dividerColor: Colors.black,
@@ -48,10 +48,10 @@ class AppTheme {
         fontFamily: 'Poly',
         textTheme: TextDisplayTheme.darkTextTheme,
         inputDecorationTheme: TextFieldTheme.darkInputDecorationTheme,
-        colorScheme: ColorScheme.dark(
+        colorScheme: const ColorScheme.dark(
           primary: Color(0xFF0D9DB6),
           secondary: Color(0xFF00C9A7),
-          background: Colors.black,
+          surface: Colors.black,
         ),
         scaffoldBackgroundColor: const Color(0xFF121212),
         appBarTheme: const AppBarTheme(
